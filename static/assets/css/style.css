@@ -222,7 +222,7 @@ header {
     z-index: 999; }
     header .menu-toggle::before {
       position: absolute;
-      content: "https://o.remove.bg/downloads/0d3fa747-f3c5-44bc-88ba-a3aa23574239/988413-200-removebg-preview.png";
+      content: "\f111";
       font-size: 1.5625rem;
       color: #ED2433;
       font-family: Flaticon; }
