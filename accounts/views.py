@@ -43,7 +43,7 @@ def contact(request):
             form.save()
         return render(request,'emailsent.html')
     context={'form':form}
-    return render(request,'contact.html')
+    return render(request,'contact.html',context)
 
 
 def search(request):

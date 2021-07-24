@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 <!-- -----------------------*******------------------------ -->
 <section class="abt">
     <div class="container">
@@ -71,49 +72,26 @@
                 </div>
             </div>
         </div>
-        <form role="form" action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="form-group">
-                        <label for="name">Name <small>*</small></label>
-                        {{form.name}}
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="form-group">
-                        <label for="name">Email <small>*</small></label>
-                        {{form.email}}
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="form-group">
-                        <label for="name">Subject <small>*</small></label>
-                        {{form.subject}}
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="form-group">
-                        <label for="name">Phone <small>*</small></label>
-                        {{form.phone}}
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        {{form.message}}
-                    </div>
-
-                    <div class="container"><button class="btn btn-danger ">Send Message</button></div>
-
-                </div>
+        <div class="container ">
+            <section id="register" class=" py-2">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class=" justify-content-center align-items-center">
+                          <form action="" method="post" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              {{form | crispy}}
+                              <input type="submit" class="btn btn-danger" value="Submit">
+                          </form>
+                        </div>
+                      </div>
+                  </div>
             </div>
-        </form>
+        </section>
+          </div>
     </div>
+        
+</div>
 </section>
     
 {% endblock  %}
