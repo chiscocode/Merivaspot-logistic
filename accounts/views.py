@@ -35,18 +35,13 @@ def about(request):
     return render(request,'about.html')
 
 def contact(request):
+    form = ContactForm()
     if request.method == 'POST':
-          name = request.POST['name']
-          subject = request.POST['subject']
-          email = request.POST['email']
-          phone = request.POST['phone']
-          message = request.POST['message']
-          
-          
-          contact = Contact(name=name, subject=subject, email=email, phone=phone, message=message)
-          contact.save()
-
-          return render(request, 'emailsent.html')
+        form = ContactForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+        return render(request,'emailsent.html')
+    context={'form':form}
     return render(request,'contact.html')
 
 

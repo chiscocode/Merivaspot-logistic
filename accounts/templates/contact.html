@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <form role="form" action="{% url 'contact' %}" method="post">
+        <form role="form" action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
                 <div class="col-lg-6 col-12">
@@ -85,32 +85,28 @@
                 <div class="col-lg-6 col-12">
                     <div class="form-group">
                         <label for="name">Email <small>*</small></label>
-                        <input id="email" name="email" class="form-control _ge_de_ol" type="email"
-                            placeholder="Enter Email" required="" aria-required="true">
+                        {{form.email}}
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="form-group">
                         <label for="name">Subject <small>*</small></label>
-                        <input id="subject" name="subject" class="form-control _ge_de_ol" type="text"
-                            placeholder="Enter Subject" required="" aria-required="true">
+                        {{form.subject}}
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="form-group">
                         <label for="name">Phone <small>*</small></label>
-                        <input id="phone" name="phone" class="form-control _ge_de_ol" type="text"
-                            placeholder="phone number" required="" aria-required="true">
+                        {{form.phone}}
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" class="form-control required" rows="5"
-                            placeholder="Enter Message" aria-required="true"></textarea>
+                        {{form.message}}
                     </div>
 
                     <div class="container"><button class="btn btn-danger ">Send Message</button></div>
