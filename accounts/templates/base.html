@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>MerivaSpot | Logistic</title>
+        <meta name="description"
+		content="MerivaSpot Logistic Services, The best Logistic services in asaba. Website build by patoski.">
+	<meta name="keywords" content="Patrick Chukwudifu,Meriva, MerivaSpot,merivaspotlogistic Patoski Chimezie, Coder, Programer,Best Web Developer In Nigeria, Django,Django Developer,Full Stack, SEO, Marketing, Python, React,Best Web Developer In Onitsha">
+    <meta name="author" content="Patrick Chukwudifu">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-47692315-56');
+	</script>
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/logo/logo.png' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/font/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <script src="{% static 'assets/js/all.js' %}"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+    <!-- =================Body Started==================== -->
+    <body>
+
+
+            {% include 'navbar.html' %}
+            <main>
+            {% block content %}
+                
+            {% endblock content %}
+            </main>
+            {% include 'footer.html' %}
+                
+
+
+
+
+
+          </body>
+          <!-- =================Body End==================== -->
+      
+          <script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+          <script src="{% static 'assets/js/popper.min.js' %}"></script>
+          <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+          <script src="{% static 'assets/js/plugins/owl.carousel.min.js' %}"></script>
+          <script src="{% static 'assets/js/script.js' %}"></script>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            setTimeout(function() {
+            $('#message').fadeOut('slow');
+            }, 5000);
+        </script>
+        <script>
+        AOS.init();
+        </script>
+      </html>

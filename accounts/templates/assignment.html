@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Rider Dashboard</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Rider Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center text-dark">
+        <div class="col-md-12">
+          <h1 class="display-4 ">Rider Dashboard</h1>
+          <p class="lead">Manage your Assignment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> Assignment</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+
+  <!--#################### Tracking Starts Here ##################-->
+<style>
+  .bg-primary{
+background-color: #f15a25 !important;
+}
+</style>
+<div class="container">
+  <div class="container mt-5 py-5 pb-5 mb-5">
+      <div class="row">
+          <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card">
+                  
+                  <!-- /.card-header -->
+                  <div class="card-body table-responsive p-0">
+                      <table class="table table-hover text-nowrap">
+                      <thead>
+                          <tr class="text-dark font-weight-bold">
+                          <th>Rider id</th>
+                          <th>Rider name</th>
+                          <th>Public Tracking ID</th>
+                          <th>Date/Time of Assignment</th>                                                        
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {% for assign in assigns %}
+                          <tr>
+                          <td>{{assign.id}}</td>
+                          <td>{{assign.rider_name}}</td>
+                          <td>{{assign.public_tracking_id}}</td>
+                          <td>{{assign.date_and_time_of_assignment}}</td>
+                          </tr>
+                          {% endfor %}
+                          
+                      </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+
+  <div class="row">
+      <div class="col-md-12">
+        {% if assigns.has_other_pages %}
+          <ul class="pagination">
+            {% if assigns.has_previous %}
+              <li class="page-item">
+                <a href="?page={{assigns.previous_page_number}}" class="page-link">&laquo;</a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                <a class="page-link">&laquo;</a>
+              </li>
+            {% endif %}
+            {% for i in assigns.paginator.page_range %}
+              {% if assigns.number == i %}
+                <li class="page-item active">
+                  <a class="page-link">{{i}}</a>
+                </li>
+              {% else %}
+                <li class="page-item">
+                  <a href="?page={{i}}" class="page-link">{{i}}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            {% if assigns.has_next %}
+              <li class="page-item">
+                <a href="?page={{assigns.next_page_number}}" class="page-link">&raquo;</a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                <a class="page-link">&raquo;</a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    
+{% endblock  %}
+    

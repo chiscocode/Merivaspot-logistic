@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="wrapper">
+                  <h2>About Us</h2>
+                  <ol>
+                      <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                      <li>About Us</li>
+                  </ol>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section class="calculation">
+   <div class="container">
+       <div class="row">
+           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="wrapper">
+                   <div class="heading">
+                       <h2>About <span>Us</span></h2>
+                   </div>
+                   <div class="inner-content">
+                       <p>At MerivaSpot Logistics we provide an advantage of swift, effective and seamless delivery, intra state and intra state delivery.<br>
+
+                        MerivaSpot Logistics is a premium, all inclusive service which collects and delivers shipment and parcels in the shortest possible time while satisfying customer’s needs.<br>
+                        At MerivaSpot Group, we are focused on creating ways to serve our clients and customers better, our aim is to ensure trustworthiness, transparency, accountability and speedy delivery. These are part of the key factors this service will offer to the public.<br>
+
+                        Our logistic services will be available online and offline in these cities: Asaba, Onitsha, Port Harcourt and Ndoni.
+                      </p>
+                       <ol>
+                        <li>9k<span>Deliveries</span></li>
+                        <li>5k<span>Intra State</span></li>
+                        <li>4k<span>Inter State</span></li>
+                       </ol>
+                   </div>
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="content">
+                <img src="{% static 'assets/images/banner/2.jpg' %}">
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section class="bg-se">
+   <div class="container">
+       <div class="row">
+           <div class="col-12">
+               <div class="wrapper">
+                   <h5>Fast and Accurate Delivery
+                       <span>SAVE UP TO 20% TODAY</span>
+                  </h5>
+                  <a href="{% url 'home' %}">Order Now</a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section class="offer-01">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="heading">
+                  <h2>Our <span>Services</span></h2>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="wrapper">
+                  <div class="image">
+                      <img src="{% static 'assets/images/banner/bike.jpg' %}">
+                      <div class="inner-content">
+                          <ol>
+                              <li>
+                                  <h6 class="text-dark">FAST & ACCURATE DELIVERY SERVICES</h6>
+                                  <h3>20% <span>off</span></h3>
+                                  <p class="text-dark">we are committed to providing smart and effective Logistics Solutions for every business, with timed deliveries that offer complete flexibility.</p>
+                                  <a href="#request">Order Now</a>
+                              </li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="wrapper">
+                  <div class="content">
+                      <ol>
+                          <li>
+                              <img src="https://image.flaticon.com/icons/png/128/1670/1670915.png">
+                              <h4>Pickups</h4>
+                              <p>Our dynamic and swift response parcel managers are always ready do pickup from your location to your preffered location in less significant time.</p>
+                          </li>
+                          <li>
+                              <img src="https://image.flaticon.com/icons/png/512/2257/2257270.png">
+                              <h4>Track Your Parcel</h4>
+                              <p>Track the movement of your parcel dynamically from pickup to delivery as you wait for it to get your parcel to arrive on time.</p>
+                          </li>
+                          <li>
+                              <img src="https://image.flaticon.com/icons/png/512/1371/1371688.png">
+                              <h4>Fast Delivery</h4>
+                              <p>Our riders reliable and deliver speedily without stories. Buy it, we deliver 24/7, No stress, No worries and No stories.</p>
+                          </li>
+                      </ol>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% endblock  %}
+    

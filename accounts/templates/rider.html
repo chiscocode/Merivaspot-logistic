@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Rider Dashboard</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Rider Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center text-dark">
+        <div class="col-md-12">
+          <h1 class="display-4 ">Rider Dashboard</h1>
+          <p class="lead">Manage your account</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Alerts -->
+  {% include 'includes/aleart.html' %}
+
+  <section id="dashboard" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Welcome {{ user.first_name }}</h2>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="site-section pb-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center mb-4">
+          <div class="border p-4 text-with-icon">
+            <i class="fas fa-edit fa-4x"></i>
+            <h2 class="h5 text-uppercase">View Assignment</h2>
+            <p><a href="{% url 'assignment' %}">Click Me</a></p>
+          </div>
+        </div>
+        
+
+        <div class="col-md-6 text-center mb-4">
+          <div class="border p-4 text-with-icon">
+            <i class="fa fa-map-marker fa-4x"></i>
+            <h2 class="h5 text-uppercase">Track Goods</h2>
+            <p><a href="{% url 'tracking' %}">Click Me</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+    
+{% endblock %}
+    

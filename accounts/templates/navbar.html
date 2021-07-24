@@ -1,0 +1,57 @@
+{% load static %}
+<!-- ============================********======================== -->
+<header>
+  <div class="top-nav">
+      <div class="container">
+          <div class="row">
+              <div class="col-6 col-xs-12">
+                  <div class="top-social-media">
+                      <ol>
+                          <li><a><i class="flaticon-facebook"></i></a></li>
+                          <li><a><i class="flaticon-twitter"></i></a></li>
+                      </ol>
+                  </div>
+              </div>
+              <div class="col-6 col-xs-12">
+                  <div class="top-right">
+                      <ol>
+                          <li><a href="{% url 'home' %}">Instant Pick Up <i class="flaticon-plus"></i></a></li>
+                      </ol>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="main-nav">
+      <div class="container">
+          <div class="row my-main-nav">
+              <div class="menu-toggle"></div>
+              <div class="logo">
+                <img class="log" src="{% static 'assets/images/logo/logo.png' %}" alt="" style="width: 150px; height: 100px;">
+              </div>
+              <div class="menu">
+                  <ul>
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'about' %}">About Us</a></li>
+                      <li><a href="{% url 'faq' %}">Faq</a></li>
+                      <li><a href="{% url 'tracking' %}">Tracking</a></li>
+                      <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                      {% if request.user.is_staff %}
+                      <li><a href="{% url 'rider' %}">Rider Dashboard</a></li>
+                      {% endif %}
+                      {% if request.user.is_superuser %}
+                      <li><a href="/admin/">Admin Dashboard</a></li>
+                      {% endif %}
+
+                      {% if request.user.is_active %}
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                      {% endif %}
+                  </ul>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</header>
+<!-- ============================********======================== -->

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #page-wrapper{
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    #success-box{
+        max-width: 800px;
+        height: auto;
+        background-color: #FFf;
+        border:1px solid #888;
+        border-radius:5px;
+        padding:15px;
+    }
+    #success-box p{
+        font-size:18px;
+    }
+
+</style>
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Contact Us</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Contact Us</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<div class="container">
+    <div class="row mt-5 pt-5 mb-5 pb-5">
+        <div class="col-md-6 mx-auto">
+            <div id="page-wrapper">
+                <div id="success-box" class="content-block">
+                    <h1 class="text-uppercase">thanks for requesting for a quote at Merivaspot Logistic!</h1>
+                    <p class="text-dark">Your message was successfuly sent. We will get back to you
+                        shortly.
+                    </p>
+                    <a id="back-btn" class="btn btn-danger" href="{% url 'home' %}">BACK TO HOME PAGE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock  %}
+    

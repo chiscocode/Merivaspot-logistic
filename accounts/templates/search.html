@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Track Your Parcel</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Tracking</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<div class="container">
+    <div class="container pb-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card">
+                    
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr class="text-dark font-weight-bold">
+                            <th>Tracking ID</th>
+                            <th>Sender name</th>
+                            <th>Reciever name</th>
+                            <th>Sender email</th>
+                            <th>Reciever email</th>
+                            <th>Sender phone</th>
+                            <th>Reciever phone</th>
+                            <th>Sender address</th>
+                            <th>Reciever address</th>
+                            <th>Sender location</th>
+                            <th>Reciever location</th>
+                            <th>Estimate Parcel Weight in Kg</th>
+                            <th>status</th>
+                            <th>request_date</th>'
+                                                        
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for pickup in pickups %}
+                            <tr>
+                            <td>{{pickup.uuid}}</td>
+                            <td>{{pickup.sendername}}</td>
+                            <td>{{pickup.recivername}}</td>
+                            <td>{{pickup.senderemail}}</td>
+                            <td>{{pickup.reciveremail}}</td>
+                            <td>{{pickup.senderphone}}</td>
+                            <td>{{pickup.reciverphone}}</td>
+                            <td>{{pickup.senderaddress}}</td>
+                            <td>{{pickup.reciveraddress}}</td>
+                            <td>{{pickup.senderlocation}}</td>
+                            <td>{{pickup.reciverlocation}}</td>
+                            <td>{{pickup.parcel}}</td>
+                            <td class="bg-danger text-white mt-2">{{pickup.status}}</td>
+                            <td>{{pickup.request_date}}</td>
+                            </td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

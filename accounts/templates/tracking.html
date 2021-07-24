@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Track Your Parcel</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Tracking</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section class="offer-01">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading" id="request">
+                    <h2>Track your<span>Parcel</span></h2>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="wrapper">
+                    <div class="image">
+                       <img src="{% static 'assets/images/banner/map.jpg' %}">
+                        <div class="inner-content">
+                            <ol>
+                                <li class="">
+                                    <h6 class="text-dark pt-2">Enter Your Tracking ID, Then Click On Track Goods</h6>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="wrapper">
+                    <form action="{% url 'search' %}" method="GET">
+                    <div class="content">
+                        <div class="row">
+                            
+                            
+                            
+                            <div class="container"><textarea type="text" name="uuid" placeholder="Enter Your Tracking ID Here" name="sendername" rows="2" class="form-control input-sm mb-3"  ></textarea></div>
+                            <div class="container"><button class="btn btn-danger ">Track Goods</button></div>
+
+
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- -----------------------*******------------------------ -->
+<section class="bg-se">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h5>Fast and Accurate Delivery
+                        <span>SAVE UP TO 20% TODAY</span>
+                   </h5>
+                   <a href="{% url 'home' %}">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- -----------------------*******------------------------ -->
+ <section class="calculation">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="wrapper">
+                    <div class="heading">
+                        <h2>Buy it,  <span>We Deliver to you</span></h2>
+                    </div>
+                    <div class="inner-content">
+                        <p>Trust Our Dedicated Services & Expansive Network Encompassing Road Pickup and Doorstep Deliveries.<br>
+                            MerivaSpot Logistics is built strongly and we work towards customer’s satisfaction.</p>
+                            <h1>+234 9036435820</h1>
+                        <ol>
+                            <li>9k<span>Deliveries</span></li>
+                            <li>5k<span>Intra State</span></li>
+                            <li>4k<span>Inter State</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="content">
+                    <img src="{% static 'assets/images/banner/2.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock %}
+    

@@ -1,0 +1,183 @@
+footer{
+    position: relative;
+    padding:3.125rem 0;
+    background:$background-color;
+    overflow: hidden;
+
+    .wrapper{
+        display:block;
+        position: relative;
+        margin:1.25rem 0;
+        text-align:left;
+
+        h3{
+            font-size: 1.25rem;
+            color: $icons-color;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .5px;
+            position: relative;
+            margin-bottom:.625rem;
+        }
+
+        .blog-footer{
+            position: relative;
+            display:flex;
+            flex: 1 1 100%;
+            flex-wrap:wrap;
+            margin:.625rem 0;
+
+            span{
+                width:100px;
+                margin:.3125rem;
+                img{
+                    width:100px;
+                }
+            }
+        }
+
+        .content{
+            margin:.625rem 0;
+            position: relative;
+            display:block;
+            text-align: left;
+
+            ul{
+                li{
+                    display:block;
+                    margin:.3125rem 0;
+                    padding:.3125rem .625rem;
+                    position: relative;
+
+                    &::before{
+                        position: absolute;
+                        content:"";
+                        left:.625rem;
+                        height:.3125rem;
+                        width:.3125rem;
+                        background:$icons-color;
+                        margin-top:.625rem;
+                    }
+
+                    a{
+                        padding-left:1.25rem;
+                        color:$color-primary;
+                        font-size: 1rem;
+
+                    }
+                }
+            }
+
+            .se{
+                position: relative;
+                flex-wrap:wrap;
+                flex-direction:column;
+                width:100%;
+                flex:1 1 100%;
+                justify-content: space-between;
+
+                li{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+                flex:1 1 100%;
+                color:$color-primary;
+                font-size: 1rem;
+
+                }
+            }
+        }
+
+        h2{
+            font-size:1.125rem;
+            color:$color-primary;
+            display:block;
+            margin:.625rem 0;
+            position: relative;
+            padding-bottom:.625rem;
+            text-transform:uppercase;
+
+            &::before{
+                position: absolute;
+                content:"";
+                left:0;
+                bottom:0;
+                width:15%;
+                background:$icons-color;
+                height:.125rem;
+            }
+        }
+
+        img{
+            display:block;
+            margin:.625rem 0;
+        }
+
+        p{
+            font-size:1rem;
+            text-align:justify;
+            display:inline-block;
+            margin:.625rem;
+            color:$color-primary;
+            margin-left:0;
+        }
+
+        .form-group{
+            position: relative;
+            margin:.625rem .625rem 1.875rem 0;
+            display:block;
+
+            .form-control{
+                border-radius:0;
+                height:2.5rem;
+                min-height: 2.5rem;
+                background:transparent;
+                position: relative;
+                padding-right:2.5rem;
+                color:$color-primary;
+                border:1px solid $color-primary;
+            }
+
+            i{
+                position: absolute;
+                right:0;
+                top:0;
+                height:2.5rem;
+                width:2.5rem;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                background:$icons-color;
+                color:$color-primary;
+                border:1px solid $color-primary;
+                cursor: pointer;
+                font-size: 1.5625rem;
+            }
+        }
+    }
+}
+
+
+.copy-right{
+    padding:.625rem 0;
+    position: relative;
+    overflow: hidden;
+    background:#0c0c0c;
+
+    p{
+        font-size:1rem;
+        color:$color-primary;
+        text-transform:capitalize;
+        letter-spacing:.5px;
+        text-align: center;
+
+        a{
+            margin-left:.625rem;
+            color:$icons-color;
+            text-transform:uppercase;
+            font-weight:600;
+            letter-spacing:0;
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+    }
+}

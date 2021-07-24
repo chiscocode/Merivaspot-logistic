@@ -1,0 +1,109 @@
+.slider{
+    position: relative;
+    overflow: hidden;
+    padding:0;
+
+    .carousel{
+        .carousel-control-prev,.carousel-control-next{
+            opacity:1;
+        }
+    }
+
+    .carousel-item{
+
+        @media screen and(max-width:575.98px){
+            height:400px;
+
+        }
+
+        img{
+            @media screen and (max-width:575.98px){
+                height:400px;
+            }
+        }
+
+        overflow: hidden;
+
+        &::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:0;
+            background-color:rgba(0,0,0,.8);
+            width:100%;
+            height:100%;
+            z-index:9;
+        }
+    }
+
+    .wrapper{
+        position: absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        z-index:9;
+        color:$color-primary;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        transition:all ease .5s;
+
+        @media screen and(max-width:575.98px){
+            text-align:center;
+        }
+
+        h6{
+            display:block;
+            margin: .3125rem 0;
+            font-size:1.875rem;
+            color:$icons-color;
+            text-transform:capitalize;
+
+            @media screen and(max-width:575.98px){
+                font-size:1.25rem;
+            }
+        }
+
+        h1{
+            display:block;
+            margin:.3125rem 0;
+            font-size:3.125rem;
+            color:$color-primary;
+            text-transform:uppercase;
+            letter-spacing:1px;
+
+            @media screen and(max-width:575.98px){
+                font-size:1.875rem;
+            }
+        }
+
+        p{
+            font-size:1.25rem;
+            display:block;
+            margin:.3125rem 0;
+            text-transform:capitalize;
+            letter-spacing:.5px;
+
+            @media screen and(max-width:575.98px){
+                font-size:1rem;
+            }
+        }
+
+        a{
+            display:inline-block;
+            margin:.625rem 0;
+            font-size: 1rem;
+            color:$color-primary;
+            background-color:$icons-color;
+            border-radius:3px;
+            padding:.3125rem 1.125rem;
+            border:0;
+            border-bottom:2px solid #bb000e;
+            position: relative;
+            z-index:9;
+
+        }
+    }
+}

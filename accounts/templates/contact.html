@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- -----------------------*******------------------------ -->
+<section class="abt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wrapper">
+                    <h2>Contact Us</h2>
+                    <ol>
+                        <li>Home<i class="flaticon-right-arrow-1"></i></li>
+                        <li>Contact Us</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------*******------------------------ -->
+<section class="_pl_rt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="_lo_we_ds">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="_ol_we_as">
+                                <ol>
+                                    <li><i class="flaticon-location"></i>
+                                        <h3>Location</h3>28 Okpanam Road  opposite Cold Stone Creamery,Asaba Delta State
+
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="_ol_we_as">
+                                <ol>
+                                    <li><i class="flaticon-email"></i>
+                                        <h3>Email</h3>merivaspot@gmail.com
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="_ol_we_as">
+                                <ol>
+                                    <li><i class="flaticon-call"></i>
+                                        <h3>Phone</h3>+2340913 103 3248
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-pla">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading">
+                    <h2>Get In <span>Touch</span></h2>
+                </div>
+            </div>
+        </div>
+        <form role="form" action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Name <small>*</small></label>
+                        <input id="name" name="name" class="form-control _ge_de_ol" type="text" placeholder="Enter Name"
+                            required="" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Email <small>*</small></label>
+                        <input id="email" name="email" class="form-control _ge_de_ol" type="email"
+                            placeholder="Enter Email" required="" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Subject <small>*</small></label>
+                        <input id="subject" name="subject" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter Subject" required="" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Phone <small>*</small></label>
+                        <input id="phone" name="phone" class="form-control _ge_de_ol" type="text"
+                            placeholder="phone number" required="" aria-required="true">
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control required" rows="5"
+                            placeholder="Enter Message" aria-required="true"></textarea>
+                    </div>
+
+                    <div class="container"><button class="btn btn-danger ">Send Message</button></div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+    
+{% endblock  %}
+    
