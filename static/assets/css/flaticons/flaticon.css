@@ -3,7 +3,7 @@
   	Creation date: 24/10/2020 09:16
   	*/
 
-@font-face {
+/* @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
@@ -20,7 +20,7 @@
     font-family: "Flaticon";
     src: url("./Flaticon.svg#Flaticon") format("svg");
   }
-}
+} */
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
