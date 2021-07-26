@@ -46,8 +46,11 @@
                             <th>request_date</th>'
                                                         
                             </tr>
+                            
                         </thead>
+                        {% if pickups %}
                         <tbody>
+                            
                             {% for pickup in pickups %}
                             <tr>
                             <td>{{pickup.uuid}}</td>
@@ -67,13 +70,22 @@
                             </td>
                             </tr>
                             {% endfor %}
-                            
+                            {% else %}
+                            <h4>Enter a Valid Tracking ID</h4>
+                            {% endif %}
                         </tbody>
                         </table>
+                        
+                 
+                    
+                  
+                
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+</div>
 
     {% endblock %}
