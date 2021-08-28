@@ -20,6 +20,8 @@
 <!-- -----------------------*******------------------------ -->
 <div class="container">
     <div class="container pb-5 mb-5">
+        {% if pickups %}
+
         <div class="row">
             <div class="col-md-12">
                 <!-- general form elements -->
@@ -48,7 +50,6 @@
                             </tr>
                             
                         </thead>
-                        {% if pickups %}
                         <tbody>
                             
                             {% for pickup in pickups %}
