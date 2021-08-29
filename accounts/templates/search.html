@@ -19,71 +19,36 @@
 </section>
 <!-- -----------------------*******------------------------ -->
 <div class="container">
-    <div class="container pb-5 mb-5">
+    <div class="container mt-5 mb-5">
         {% if pickups %}
 
         <div class="row">
-            <div class="col-md-12">
-                <!-- general form elements -->
-                <div class="card">
-                    
-                    <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
-                        <table class="table table-hover text-nowrap">
-                        <thead>
-                            <tr class="text-dark font-weight-bold">
-                            <th>Tracking ID</th>
-                            <th>Sender name</th>
-                            <th>Reciever name</th>
-                            <th>Sender email</th>
-                            <th>Reciever email</th>
-                            <th>Sender phone</th>
-                            <th>Reciever phone</th>
-                            <th>Sender address</th>
-                            <th>Reciever address</th>
-                            <th>Sender location</th>
-                            <th>Reciever location</th>
-                            <th>Estimate Parcel Weight in Kg</th>
-                            <th>status</th>
-                            <th>request_date</th>'
-                                                        
-                            </tr>
-                            
-                        </thead>
-                        <tbody>
-                            
-                            {% for pickup in pickups %}
-                            <tr>
-                            <td>{{pickup.uuid}}</td>
-                            <td>{{pickup.sendername}}</td>
-                            <td>{{pickup.recivername}}</td>
-                            <td>{{pickup.senderemail}}</td>
-                            <td>{{pickup.reciveremail}}</td>
-                            <td>{{pickup.senderphone}}</td>
-                            <td>{{pickup.reciverphone}}</td>
-                            <td>{{pickup.senderaddress}}</td>
-                            <td>{{pickup.reciveraddress}}</td>
-                            <td>{{pickup.senderlocation}}</td>
-                            <td>{{pickup.reciverlocation}}</td>
-                            <td>{{pickup.parcel}}</td>
-                            <td class="bg-danger text-white mt-2">{{pickup.status}}</td>
-                            <td>{{pickup.request_date}}</td>
-                            </td>
-                            </tr>
-                            {% endfor %}
-                            {% else %}
-                            <h4>Enter a Valid Tracking ID</h4>
-                            {% endif %}
-                        </tbody>
-                        </table>
-                        
-                 
-                    
-                  
+            <div class="col-md-6">
                 
-                    </div>
-                </div>
+                {% for pickup in pickups %}
+
+                <h4>Tracking ID</h4> <p>{{pickup.uuid}}</p>
+                <h4>Sender name</h4> <p>{{pickup.sendername}}</p>
+                <h4>Reciever name</h4> <p>{{pickup.recivername}}</p>
+                <h4>Sender email</h4> <p>{{pickup.senderemail}}</p>
+                <h4>Reciever email</h4> <p>{{pickup.reciveremail}}</p>
+                <h4>Sender phone</h4> <p>{{pickup.senderphone}}</p>
+                <h4>Reciever phone</h4> <p>{{pickup.reciverphone}}</p>
             </div>
+            <div class="col-md-6">
+                <h4>Sender address</h4> <p>{{pickup.senderaddress}}</p>
+                <h4>Reciever address</h4> <p>{{pickup.reciveraddress}}</p>
+                <h4>Sender location</h4> <p>{{pickup.senderlocation}}</p>
+                <h4>Reciever location</h4> <p>{{pickup.reciverlocation}}</p>
+                <h4>Estimate Parcel Weight in Kg</h4> <p>{{pickup.parcel}}</p>
+                <h4>status</h4> <p class="text-danger text-white mt-2">{{pickup.status}}</p>
+                <h4>request_date</h4> <p>{{pickup.request_date}}</p>
+            </div>
+                {% endfor %}
+                {% else %}
+                <h4>Enter a Valid Tracking ID</h4>
+                {% endif %}
+                    
         </div>
     </div>
 
